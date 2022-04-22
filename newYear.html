@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Happy New Year</h1>
+    <div class="NewYear">
+      <div id="days">00</div>
+      <div id="hours">00</div>
+      <div id="minutes">00</div>
+      <div id="seconds">00</div>
+    </div>
+
+    <style>
+      body {
+        background-image: url(https://wallpaperaccess.com/full/2904212.jpg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+      h1 {
+        padding: 50px;
+        background-image: linear-gradient(
+          315deg,
+          #eec0c6 0%,
+          transparent,
+          #7ee8fa 74%,
+          transparent
+        );
+
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 10%;
+        border-bottom-left-radius: 10%;
+      }
+      .NewYear {
+        border-top-left-radius: 30%;
+        border-top-right-radius: 30%;
+        border-bottom-right-radius: 10%;
+        border-bottom-left-radius: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 60px;
+        padding: 50px;
+        width: 600px;
+
+        background-image: linear-gradient(
+          315deg,
+          #eec0c6 0%,
+
+          #7ee8fa 74%
+        );
+      }
+    </style>
+
+    <script>
+      let day = document.getElementById("days");
+      let hour = document.getElementById("hours");
+      let minute = document.getElementById("minutes");
+      let second = document.getElementById("seconds");
+
+      let newYear = "1 Jan 2023";
+
+      function Countdown() {
+        let currentDate = new Date();
+        let NewDate = new Date(newYear);
+        let totalSeconds = (NewDate - currentDate) / 1000;
+
+        let dayEl = Math.floor(totalSeconds / 3600 / 24);
+        let hourEl = Math.floor(totalSeconds / 3600) % 24;
+        let minEl = Math.floor(totalSeconds / 60) % 60;
+        let secEl = Math.floor(totalSeconds) % 60;
+
+        day.innerHTML = formatter(dayEl);
+        hour.innerHTML = formatter(hourEl);
+        minute.innerHTML = formatter(minEl);
+        second.innerHTML = formatter(secEl);
+
+        // console.log(dayEl, hourEl, minEl, secEl);
+      }
+
+      function formatter(time) {
+        if (time < 10) {
+          return `0${time}`;
+        } else {
+          return time;
+        }
+      }
+
+      Countdown();
+
+      setInterval(Countdown, 1000);
+    </script>
+  </body>
+</html>
