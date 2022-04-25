@@ -1,0 +1,156 @@
+<div class="container">
+  <div class="login">
+    <div class="slogan-container">
+      <img src="fb.png" alt="" width="280px" />
+      <span>
+        Facebook helps you to always stay in touch and communicate with your
+        friends.
+      </span>
+    </div>
+    <div class="login-container">
+      <form>
+        <input
+          type="text"
+          class="loginemail"
+          placeholder="Email address or phone number"
+        />
+        <input type="password" class="loginemail" placeholder="Password" />
+        <input type="submit" value="Enterance" class="submit" />
+      </form>
+      <a href="#" class="forgot-password">Forgot your password?</a>
+      <a href="#" class="create-account">Create a new account</a>
+    </div>
+  </div>
+  <div class="languages-othertools">
+    <p class="languages">
+      Russian Azerbaijani language Turkish English (US) Arabia German French
+      France Persian Georgian Spanish Portuguese - Brazil
+    </p>
+    <p class="on-fb">
+      Registration Entrance Messenger Facebook Lite Watch Places Games
+      Marketplace Facebook Pay Oculus Portal Instagram Bulletin Local Charity
+      events Services Voting Information Center Groups Information Create ad
+      Create Page Developers Jobs Confidentiality Cookies Advertising
+      Preferences Terms of Use Reference Settings
+    </p>
+  </div>
+</div>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+  * {
+    background-color: #f0f2f5;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid #000; */
+    width: 52vw;
+    height: 75vh;
+  }
+
+  .login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .slogan-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 28px;
+    font-weight: 300;
+    width: 50%;
+    height: 200px;
+  }
+
+  .login-container {
+    border-radius: 6px;
+    box-shadow: 0px 8px 15px 2px #8888885d;
+    width: 400px;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .login-container form {
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .loginemail:focus {
+    outline: solid 1px #1877f2;
+  }
+  .loginemail::placeholder {
+    opacity: 0.8;
+  }
+  .loginemail:focus::placeholder {
+    opacity: 0.4;
+  }
+  .submit {
+    background-color: #1877f2;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .login-container form input {
+    margin: 5px;
+    padding: 11px;
+    font-size: 17px;
+    border-radius: 7px;
+    border: 0.1px solid rgba(0, 0, 0, 0.082);
+    border-left: 0px;
+    border-right: 0px;
+  }
+  .forgot-password {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+    padding: 0px 78px 20px 78px;
+  }
+  .create-account {
+    padding: 10px 35px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: #42b72a;
+    color: #fff;
+    margin: 20px;
+  }
+
+  .languages-othertools {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.6;
+    font-size: 12px;
+    grid-column: 1/3;
+    height: 200px;
+    width: 100%;
+  }
+  .languages {
+    word-spacing: 10px;
+    margin-bottom: 10px;
+  }
+
+  .on-fb {
+    border-top: 1px solid rgba(0, 0, 0, 0.205);
+    margin-top: 5px;
+    padding-top: 10px;
+    word-spacing: 15px;
+  }
+</style>
